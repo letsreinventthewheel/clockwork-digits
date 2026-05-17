@@ -35,7 +35,7 @@ constexpr static size_t TOTAL_ANALOG_CLOCK_HANDS_COUNT = DIGITS_COUNT * ANALOG_C
 static float current_angles[TOTAL_ANALOG_CLOCK_HANDS_COUNT];
 static float target_angles[TOTAL_ANALOG_CLOCK_HANDS_COUNT];
 
-[[maybe_unused]]static char DIGITS[10][ANALOG_CLOCKS_PER_DIGIT] = {
+static char DIGITS[10][ANALOG_CLOCKS_PER_DIGIT] = {
     { 'a','-','-','b',
       '|','a','b','|',
       '|','|','|','|',
@@ -126,7 +126,7 @@ static void DrawAnalogClock(Vector2 center, float radius, float angle1, float an
     DrawAnalogClockHand(center, radius, angle2);
 }
 
-[[maybe_unused]]static void SymbolAngles(char symbol, float* angle1, float* angle2) {
+static void SymbolAngles(char symbol, float* angle1, float* angle2) {
     switch (symbol) {
         case '-': *angle1 =   0.0f; *angle2 = 180.0f; break;
         case '|': *angle1 =  90.0f; *angle2 = 270.0f; break;
